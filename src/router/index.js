@@ -6,6 +6,7 @@ import Attractions from '@/views/Attractions.vue';
 import Bars from '@/views/Bars.vue';
 import Evenements from '@/views/Evenements.vue';
 import SallesDeJeux from '@/views/SallesDeJeux.vue';
+import VirtualTour from '@/components/VirtualTour.vue';
 
 const routes = [
   {
@@ -19,6 +20,12 @@ const routes = [
   { path: '/bars', name: 'Bars', component: Bars },
   { path: '/evenements', name: 'Evenements', component: Evenements },
   { path: '/sallesdejeux', name: 'SallesDejeux', component: SallesDeJeux },
+  {
+    path: '/virtual-tour/:placeId',
+    name: 'VirtualTour',
+    component: VirtualTour,
+    props: true
+  }
 ];
 
 const router = createRouter({
